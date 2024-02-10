@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "1877bbdc-4b41-4732-9704-26b61808c767",
+		"name": "OpenAI tutorials",
+		"description": "This is for testing OpenAI API calls. Please NOTE, use your own API keys.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "OpenAI_Test",
+			"id": "e8a806cd-e541-40df-8b06-5fd6ce5e164f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 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",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "UPvbi4M8R/beach.png"
+						},
+						{
+							"key": "mask",
+							"type": "file",
+							"src": "Mgx4K24KI/mask.png"
+						},
+						{
+							"key": "prompt",
+							"value": "A sunlit beach with an elephant on it",
+							"type": "text"
+						},
+						{
+							"key": "n",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "size",
+							"value": "1024x1024",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://api.openai.com/v1/images/edits"
+			},
+			"response": []
+		},
+		{
+			"name": "AudiotoText",
+			"id": "5f96717f-b98c-4aa2-999c-eb1db3aa7643",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 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",
+						"type": "text"
+					}
+				],
+				"url": "https://api.openai.com/v1/audio/transcriptions"
+			},
+			"response": []
+		},
+		{
+			"name": "TxttoAudio",
+			"id": "82cf200a-7515-4d55-9936-ff3cbbba7031",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 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",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "-ua0IZmlT/Bonjour.m4a"
+						},
+						{
+							"key": "model",
+							"value": "whisper-1",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://api.openai.com//v1/audio/translations"
+			},
+			"response": []
+		},
+		{
+			"name": "C#Code_AddNos",
+			"id": "4acbd1f8-03aa-4061-9c21-80080fbc821c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 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",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"prompt\": \"Create a C# method that adds 2 doubles together and returns the result\",\r\n    \"temperature\": 0.7,\r\n    \"max_tokens\": 100,\r\n    \"model\": \"gpt-3.5-turbo-instruct\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api.openai.com/v1/completions"
+			},
+			"response": []
+		},
+		{
+			"name": "Update_Code",
+			"id": "efdad801-ac5c-4674-82c6-51283e2eda10",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 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",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"prompt\": \"Update this C# method to add the 2 parameters together and return the result:\\r\\npublic double Add(double a, double b){\\r\\n//Your code here\\r\\n}\",\r\n    \"temperature\": 0.7,\r\n    \"max_tokens\": 100,\r\n    \"model\": \"gpt-3.5-turbo-instruct\"    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api.openai.com/v1/completions"
+			},
+			"response": []
+		},
+		{
+			"name": "Code_Enhancement",
+			"id": "35bcb558-f59d-4b1c-8436-264964948121",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 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",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"prompt\": \"Refactor this C# code to be more efficient:\\r\\npublic double Add(double a, double b)=>a+b;\",\r\n    \"temperature\": 0.7,\r\n    \"max_tokens\": 100,\r\n    \"model\": \"gpt-3.5-turbo-instruct\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api.openai.com/v1/completions"
+			},
+			"response": []
+		},
+		{
+			"name": "Embeddings",
+			"id": "719a992a-3ce4-4609-90ae-6738d730d830",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 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",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"prompt\": \"Cluster the following text,plural, based on their relatedness\\nI sure love dogs,Cats are really cute,I drove here in a car,Not a Doctor,Birds make good pet, Motocycles are loud\",\r\n   \"temperature\": 0.7,\r\n   \"max_tokens\": 200,\r\n   \"model\": \"gpt-3.5-turbo-instruct\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api.openai.com/v1/completions"
+			},
+			"response": []
+		}
+	]
+}
